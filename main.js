@@ -27,3 +27,16 @@ function loadImage() {
 
     reader.readAsDataURL(event.target.files[0]);
 }
+
+function ChangeFilter() {
+
+    let filter = document.getElementById("Filter").value;
+
+    // Moltiplica questo valore per 10 e lo usa per creare una stringa che rappresenta l’effetto di scala di grigi in percentuale.
+
+    let greyScale = 'grayscale(' + (filter * 10) + '%)';
+
+    // applico il filtro grayscale alla mia immagine
+
+    document.getElementById("imageDisplay").style['-webkit-filter'] = greyScale;
+ }
